@@ -19,8 +19,12 @@ function NavBar() {
           <Link to="/" onClick={handleLogout}>
             Log Out
           </Link>
-          ) : (
+        ) : (
+          <>
           <Link to="/login">Login</Link>
+          <Link to="/signup">Sign Up</Link>
+          <Link to="/createproject">Create Project</Link>
+          </>  
         )}
       </nav>
       <Outlet />

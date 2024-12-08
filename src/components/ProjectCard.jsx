@@ -3,12 +3,12 @@ import "./ProjectCard.css";
 
 function ProjectCard(props) {
   const { projectData } = props;
-  const projectLink = `project/${projectData.id}`;
+  const projectLink = `projects/${projectData.id}`;
 
   return (
     <div className="project-card">
       <Link to={projectLink}>
-        <img src={projectData.image} />
+        <img src={projectData.image} alt={projectData.title} />
         <h3>{projectData.title}</h3>
       </Link>
     </div>
