@@ -10,7 +10,7 @@ async function postPledge({ amount, project_id, anonymous = false, comment = "" 
     },
     body: JSON.stringify({
       amount: amount,
-      project_id: project_id,
+      project: project_id,
       anonymous: anonymous,
       comment: comment,
     }),

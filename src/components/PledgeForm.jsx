@@ -1,8 +1,12 @@
 import { useState } from "react";
 import postPledge from "../api/post-pledge";
+import { useNavigate } from "react-router-dom";
 
 function PledgeForm({ projectId }) {
-  const [pledgeData, setPledgeData] = useState({
+
+    const navigate = useNavigate(); 
+    
+    const [pledgeData, setPledgeData] = useState({
     amount: "",
     anonymous: false,
     comment: "",
@@ -28,6 +32,7 @@ function PledgeForm({ projectId }) {
       .then((response) => {
         console.log("Pledge created successfully:", response);
         alert("Thank you for your pledge!");
+        navigate ("/");
       })
       .catch((error) => {
         console.error("Error creating pledge:", error.message);

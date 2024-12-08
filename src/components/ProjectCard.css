@@ -9,3 +9,16 @@
     height: 300px;
     object-fit: cover;
   }
+
+  .like-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #ff4081;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .like-button:hover {
+    color: #e73370;
+  }
