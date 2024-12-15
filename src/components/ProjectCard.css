@@ -1,24 +1,42 @@
-.project-card {
-    width: 100%;
-    border: 1px solid black;
-    box-shadow: 0px 0px 5px gray;
-  }
-  
-  .project-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
+:root {
+  --background-color: #f7f5eb; /* Soft, calming beige for background */
+  --nav-color: #675d50;       /* Neutral, earthy tone for navigation */
+  --nav-text: #ffffff;        /* White text for contrast */
+  --primary-color: #ccccaa;   /* Calming greenish-yellow */
+  --secondary-color: #e8d5b5; /* Muted, soft yellow */
+  --accent-color: #abc4aa;    /* Soft green for accents */
+  --hover-color: #a9907e;     /* Warm brown for hover effects */
+  --text-color: #4f4f4f;      /* Neutral gray for body text */
+}
 
-  .like-button {
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: #ff4081;
-    cursor: pointer;
-    padding: 0;
-  }
-  
-  .like-button:hover {
-    color: #e73370;
-  }
+.project-card {
+  background-color: #fff; /* Ensure all cards have a white background */
+  border: 1px solid #ccc; /* Subtle border for separation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a clean look */
+  border-radius: 10px; /* Rounded edges for a modern feel */
+  overflow: hidden; /* Prevent content from overflowing */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Crops image without distortion */
+  border-radius: 10px 10px 0 0; /* Matches the top edges of card */
+}
+
+.project-card h3 {
+  font-size: 18px;
+  margin: 15px 0;
+  color: var(--text-color);
+}
+
+.project-card p {
+  font-size: 14px;
+  color: var(--text-color);
+}

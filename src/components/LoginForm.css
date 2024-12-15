@@ -1,0 +1,75 @@
+/* General form styling */
+form {
+    background-color: var(--background-color); /* Matches main page background */
+    border: 1px solid #ccc; /* Light border for subtle separation */
+    border-radius: 10px; /* Rounded corners for a clean look */
+    padding: 40px; /* Increased padding for a more spacious form */
+    max-width: 400px; /* Restrict form width for readability */
+    margin: 50px auto; /* Center the form on the page with more space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a 3D effect */
+  }
+  
+  /* Styling for labels */
+  label {
+    display: block; /* Place labels on their own line */
+    font-size: 16px; /* Slightly larger font size for readability */
+    color: var(--text-color); /* Match text color to theme */
+    margin-bottom: 10px; /* Space between label and input */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Styling for input fields */
+  input {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Add space inside the input */
+    margin-bottom: 20px; /* Space between inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded edges */
+    font-size: 14px; /* Match text size with labels */
+    background-color: #fff; /* White background for contrast */
+    box-sizing: border-box; /* Ensure padding doesn’t affect total width */
+  }
+  
+  input:focus {
+    outline: none; /* Remove default outline */
+    border-color: var(--primary-color); /* Highlight input on focus */
+    box-shadow: 0 0 5px var(--primary-color); /* Add glow effect on focus */
+  }
+  
+  /* Styling for the button */
+  button {
+    width: 100%; /* Full width button */
+    padding: 12px; /* Add more padding for a larger button */
+    background-color: var(--primary-color); /* Matches primary theme color */
+    color: white; /* White text for contrast */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded edges */
+    font-size: 16px; /* Larger font for emphasis */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  button:hover {
+    background-color: var(--hover-color); /* Darker color on hover */
+  }
+  
+  button:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px var(--hover-color); /* Glow effect on focus */
+  }
+  
+  /* Centering and spacing */
+  div {
+    margin-bottom: 20px; /* Space between form elements */
+  }
+  
+  /* Ensure footer isn't affected */
+  footer {
+    background-color: var(--nav-color); /* Match footer to navbar color */
+    color: var(--nav-text);
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Prevent it from shrinking */
+    width: 100%;
+    margin-top: auto; /* Ensure footer stays at the bottom */
+  }

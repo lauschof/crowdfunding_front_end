@@ -8,14 +8,17 @@ import LoginPage from "./pages/LoginPage.jsx";
 import SignupPage from "./pages/SignupPage.jsx";
 import CreateProject from "./pages/CreateProject.jsx"
 
-
 import NavBar from "./components/NavBar.jsx";
+import Footer from "./components/Footer.jsx"; 
 import { AuthProvider } from "./components/AuthProvider.jsx";
+
+import './components/NavBar.css';
+import Layout from "./components/Layout.jsx";
 
 const router = createBrowserRouter([
   {
       path: "/",
-      element: <NavBar />,
+      element: <Layout />,
       children: [
           { path: "/", element: <HomePage /> },
           { path: "/login", element: <LoginPage /> },

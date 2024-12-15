@@ -1,0 +1,99 @@
+/* NavBar.css */
+
+:root {
+  --background-color: #f8edb3; /* Soft, calming beige for background */
+  --nav-color: #7d6b54;       /* Neutral, earthy tone for navigation */
+  --nav-text: #ffffff;        /* White text for contrast */
+  --primary-color: #ccccaa;   /* Calming greenish-yellow */
+  --secondary-color: #e8d5b5; /* Muted, soft yellow */
+  --accent-color: #abc4aa;    /* Soft green for accents */
+  --hover-color: #a9907e;     /* Warm brown for hover effects */
+  --text-color: #4f4f4f;      /* Neutral gray for body text */
+}
+
+/* General styles for the navigation container */
+.nav-container {
+  background-color: var(--primary-color); /* Background color for the nav */
+  padding: 20px; /* Add some space around the nav */
+  color: var(--nav-text); /* Text color */
+  text-align: center;
+  position: relative; /* Position relative for positioning child elements like the hamburger */
+}
+
+/* Navigation bar container */
+.nav-bar {
+  display: flex;
+  flex-direction: column; /* Stack the heading and links vertically */
+  align-items: center; /* Center align content horizontally */
+  gap: 15px; /* Space between the heading and the links */
+}
+
+/* Styles for the heading */
+.nav-bar h1 {
+  font-size: 32px;
+  margin: 0; /* Remove default margin */
+  color: var(--text-color);
+}
+
+/* Links container */
+.nav-links {
+  display: flex; /* Lay out links horizontally by default */
+  gap: 20px; /* Add space between links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color); /* Link text color */
+  font-size: 26px;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+  color: var(--hover-color); /* Highlight links on hover */
+}
+
+/* Styles for mobile menu */
+.nav-links.mobile {
+  display: none; /* Hidden by default on mobile */
+  flex-direction: column; /* Stack links vertically */
+  gap: 10px; /* Space between links */
+  margin-top: 10px; /* Add spacing from the heading */
+}
+
+.nav-links.mobile.open {
+  display: flex; /* Show the links when the menu is open */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none; /* Hidden by default on larger screens */
+  font-size: 24px; /* Icon size */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  position: absolute; /* Position it relative to the navbar container */
+  top: 20px; /* Space from the top */
+  right: 20px; /* Space from the right */
+  color: var(--text-color); /* Icon color matching your theme */
+  background: none; /* No background */
+  border: none; /* No border */
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height */
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show the hamburger menu */
+  }
+  
+  .nav-links {
+    display: none; /* Hide the links by default on mobile */
+  }
+
+  .nav-links.mobile.open {
+    display: flex; /* Show links when the menu is toggled */
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Space between links */
+    margin-top: 10px;
+  }
+}
